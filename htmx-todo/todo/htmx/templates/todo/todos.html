@@ -83,4 +83,9 @@
       event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
     });
   </script>
+  <script>
+    document.body.addEventListener('htmx:afterRequest', (event) => {
+      document.querySelector("input.title").value = '';
+    });
+  </script>
 </html>
