@@ -66,9 +66,11 @@
 
       <div
         class="divide-y divide-gray-200"
-        id="tools"
+        id="todos"
       >
-        
+        {% for todo in todos %}
+          {% include 'todo/partials/todo.html' %}
+        {% endfor %}
       </div>
       
     </div>
